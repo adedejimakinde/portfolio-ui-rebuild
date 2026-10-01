@@ -23,23 +23,45 @@ a{color:#2B59FF;text-decoration:none}a:hover{color:#1A3FD1}
 .btn{transition:transform .2s ease, background-color .2s ease}
 .btn:hover{transform:translateY(-2px)}
 @media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
+
+@media (max-width: 768px) {
+  .mobile-padding { padding-left: 24px !important; padding-right: 24px !important; }
+  .mobile-header { height: auto !important; flex-direction: column !important; align-items: flex-start !important; padding: 24px 0 12px 0 !important; gap: 16px !important; }
+  .mobile-nav { flex-wrap: wrap !important; gap: 16px !important; }
+  .mobile-hero-stack { flex-direction: column !important; padding-top: 32px !important; gap: 48px !important; }
+  .mobile-hero-title { font-size: 40px !important; }
+  .mobile-hero-stats { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .mobile-hero-stats-item { padding-left: 0 !important; border-left: none !important; border-top: 1px solid #1E2B4A; padding-top: 16px !important; }
+  .mobile-card { width: 100% !important; }
+  .mobile-col-1 { grid-template-columns: 1fr !important; }
+  .mobile-research { flex-direction: column !important; padding: 32px !important; gap: 32px !important; }
+  .mobile-research-title { font-size: 32px !important; }
+  .mobile-exp-stack { flex-direction: column !important; gap: 48px !important; }
+  .mobile-exp-left { width: 100% !important; }
+  .mobile-exp-right { padding-left: 0 !important; }
+  .mobile-timeline { display: none !important; }
+  .mobile-footer { flex-direction: column !important; align-items: flex-start !important; gap: 40px !important; }
+  .mobile-footer-title { font-size: 40px !important; }
+  .mobile-footer-bottom { flex-direction: column !important; align-items: flex-start !important; gap: 24px !important; }
+  .mobile-section-title { font-size: 32px !important; }
+}
 </style>
 
 <div style="width: 100%; min-height: 100vh; max-width: 1440px; margin: 0 auto; box-sizing: border-box; background: #faf9f5; display: flex; flex-direction: column; overflow: hidden">
 
 <!-- HERO -->
-<section id="top" style="background: #0A1128; color: #FFFFFF; padding: 0 96px 104px; display: flex; flex-direction: column; position: relative; overflow: hidden">
+<section id="top" class="mobile-padding" style="background: #0A1128; color: #FFFFFF; padding: 0 96px 104px; display: flex; flex-direction: column; position: relative; overflow: hidden">
 <svg width="1440" height="880" style="position: absolute; left: 0; top: 0" aria-hidden="true">
 <defs><pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"></path></pattern></defs>
 <rect width="1440" height="880" fill="url(#grid)"></rect>
 </svg>
 
-<header style="position: relative; height: 96px; display: flex; align-items: center; justify-content: space-between; animation: fadeUp .6s ease both">
+<header class="mobile-header" style="position: relative; height: 96px; display: flex; align-items: center; justify-content: space-between; animation: fadeUp .6s ease both">
 <a href="#top" style="display: flex; align-items: center; gap: 12px; color: #FFFFFF">
 <span style="width: 40px; height: 40px; border-radius: 12px; background: #2B59FF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; letter-spacing: 0.5px; color: #FFFFFF">DM</span>
 <span style="font-size: 19px; font-weight: 600">Deji Makinde</span>
 </a>
-<nav style="display: flex; align-items: center; gap: 36px; font-size: 15px; font-weight: 500">
+<nav class="mobile-nav" style="display: flex; align-items: center; gap: 36px; font-size: 15px; font-weight: 500">
 <a href="#services" style="color: #A7B1CC">Services</a>
 <a href="#work" style="color: #A7B1CC">Work</a>
 <a href="#research" style="color: #A7B1CC">Research</a>
@@ -48,29 +70,29 @@ a{color:#2B59FF;text-decoration:none}a:hover{color:#1A3FD1}
 </nav>
 </header>
 
-<div style="position: relative; display: flex; gap: 72px; align-items: center; padding-top: 64px">
+<div class="mobile-hero-stack" style="position: relative; display: flex; gap: 72px; align-items: center; padding-top: 64px">
 <div style="flex: 1 1 0; display: flex; flex-direction: column; gap: 30px">
 <div style="align-self: flex-start; display: flex; align-items: center; gap: 10px; padding: 8px 16px 8px 12px; border: 1px solid #243457; border-radius: 999px; font-size: 14px; color: #D5DBEA; animation: fadeUp .7s ease .1s both">
 <span style="width: 8px; height: 8px; border-radius: 50%; background: #16C79A; animation: pulse 2s infinite"></span>
 Available for remote ML and DevRel roles
 </div>
-<h1 style="margin: 0; font-size: 56px; line-height: 1.08; font-weight: 700; letter-spacing: -1.6px; animation: fadeUp .8s ease .2s both">Software and Machine Learning Engineer (NLP) working at the intersection of <span style="color: #7C98FF">production and research.</span></h1>
+<h1 class="mobile-hero-title" style="margin: 0; font-size: 56px; line-height: 1.08; font-weight: 700; letter-spacing: -1.6px; animation: fadeUp .8s ease .2s both">Software and Machine Learning Engineer (NLP) working at the intersection of <span style="color: #7C98FF">production and research.</span></h1>
 <p style="margin: 0; max-width: 560px; font-size: 19px; line-height: 1.6; color: #A7B1CC; animation: fadeUp .8s ease .3s both">Based in Lagos. I ship NLP libraries and production backends, and I do African language research with the Masakhane community.</p>
-<div style="display: flex; gap: 14px; animation: fadeUp .8s ease .4s both">
+<div class="mobile-nav" style="display: flex; gap: 14px; animation: fadeUp .8s ease .4s both">
 <a href="#work" class="btn" style="display: inline-flex; align-items: center; gap: 10px; padding: 17px 28px; background: #2B59FF; color: #FFFFFF; border-radius: 14px; font-weight: 600; font-size: 16px">View my work
 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 <a href="#contact" class="btn" style="padding: 17px 28px; border: 1px solid #2E3F66; color: #FFFFFF; border-radius: 14px; font-weight: 600; font-size: 16px">Download résumé</a>
 </div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 18px; border-top: 1px solid #1E2B4A; padding-top: 28px; animation: fadeUp .8s ease .5s both">
+<div class="mobile-hero-stats" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 18px; border-top: 1px solid #1E2B4A; padding-top: 28px; animation: fadeUp .8s ease .5s both">
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 30px; font-weight: 500">v0.2.0</span><span style="font-size: 14px; color: #8C97B5">yotext live on PyPI</span></div>
-<div style="display: flex; flex-direction: column; gap: 6px; padding-left: 28px; border-left: 1px solid #1E2B4A"><span style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 30px; font-weight: 500">4</span><span style="font-size: 14px; color: #8C97B5">transformers benchmarked</span></div>
-<div style="display: flex; flex-direction: column; gap: 6px; padding-left: 28px; border-left: 1px solid #1E2B4A"><span style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 30px; font-weight: 500">#14037</span><span style="font-size: 14px; color: #8C97B5">pull request to spaCy</span></div>
+<div class="mobile-hero-stats-item" style="display: flex; flex-direction: column; gap: 6px; padding-left: 28px; border-left: 1px solid #1E2B4A"><span style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 30px; font-weight: 500">4</span><span style="font-size: 14px; color: #8C97B5">transformers benchmarked</span></div>
+<div class="mobile-hero-stats-item" style="display: flex; flex-direction: column; gap: 6px; padding-left: 28px; border-left: 1px solid #1E2B4A"><span style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 30px; font-weight: 500">#14037</span><span style="font-size: 14px; color: #8C97B5">pull request to spaCy</span></div>
 </div>
 </div>
 
 <!-- AUTO SLIDER -->
-<div style="width: 540px; flex-shrink: 0; animation: fadeUp .9s ease .35s both">
-<div style="background: #FFFFFF; color: #0A1128; border-radius: 28px; padding: 28px; box-shadow: 0 40px 80px rgba(0,0,0,.35); display: flex; flex-direction: column; gap: 22px">
+<div class="mobile-card" style="width: 540px; flex-shrink: 0; animation: fadeUp .9s ease .35s both; max-width: 100%; box-sizing: border-box;">
+<div style="background: #FFFFFF; color: #0A1128; border-radius: 28px; padding: 28px; box-shadow: 0 40px 80px rgba(0,0,0,.35); display: flex; flex-direction: column; gap: 22px; box-sizing: border-box;">
 <div style="display: flex; justify-content: space-between; align-items: center">
 <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600"><span style="width: 8px; height: 8px; border-radius: 50%; background: #16C79A"></span>Project showcase</div>
 <span id="slide-counter" style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 13px; color: #5A6480">01 / 04</span>
@@ -187,14 +209,14 @@ Available for remote ML and DevRel roles
 </section>
 
 <!-- SERVICES -->
-<section id="services" style="padding: 120px 96px 0; display: flex; flex-direction: column; gap: 48px">
+<section id="services" class="mobile-padding" style="padding: 120px 96px 0; display: flex; flex-direction: column; gap: 48px">
 <div style="display: flex; justify-content: space-between; align-items: flex-end">
 <div style="display: flex; flex-direction: column; gap: 14px">
 <span style="font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #2B59FF">What I do</span>
-<h2 style="margin: 0; font-size: 48px; font-weight: 700; letter-spacing: -1.5px; line-height: 1.1">Three ways I can help your team</h2>
+<h2 class="mobile-section-title" style="margin: 0; font-size: 48px; font-weight: 700; letter-spacing: -1.5px; line-height: 1.1">Three ways I can help your team</h2>
 </div>
 </div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div class="mobile-col-1" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
 <div class="lift" style="background: #FFFFFF; border: 1px solid #E3E8F2; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px; animation: fadeUp .8s ease .1s both">
 <span style="width: 52px; height: 52px; border-radius: 14px; background: #EEF2FF; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A3FD1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"></path><rect x="7" y="7" width="10" height="10" rx="2"></rect></svg></span>
 <span style="font-size: 22px; font-weight: 700">ML engineering</span>
@@ -214,15 +236,15 @@ Available for remote ML and DevRel roles
 </section>
 
 <!-- WORK -->
-<section id="work" style="padding: 120px 96px 0; display: flex; flex-direction: column; gap: 48px">
+<section id="work" class="mobile-padding" style="padding: 120px 96px 0; display: flex; flex-direction: column; gap: 48px">
 <div style="display: flex; justify-content: space-between; align-items: flex-end">
 <div style="display: flex; flex-direction: column; gap: 14px">
 <span style="font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #2B59FF">Selected work</span>
-<h2 style="margin: 0; font-size: 48px; font-weight: 700; letter-spacing: -1.5px; line-height: 1.1">Projects with real users and real code</h2>
+<h2 class="mobile-section-title" style="margin: 0; font-size: 48px; font-weight: 700; letter-spacing: -1.5px; line-height: 1.1">Projects with real users and real code</h2>
 </div>
 <a href="https://github.com/adedejimakinde" style="font-weight: 600; font-size: 16px">All repositories ↗</a>
 </div>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+<div class="mobile-col-1" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
 <article class="lift" style="background: #FFFFFF; border: 1px solid #E3E8F2; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 16px">
 <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 13px; font-weight: 600; color: #5A6480">Python library</span><span style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 13px; padding: 5px 10px; border-radius: 8px; background: #E7F8F2; color: #0F7A5F">v0.2.0</span></div>
 <span style="font-size: 28px; font-weight: 700; letter-spacing: -0.5px">yotext</span>
@@ -251,14 +273,14 @@ Available for remote ML and DevRel roles
 </section>
 
 <!-- RESEARCH -->
-<section id="research" style="padding: 120px 96px 0">
-<div style="background: #0A1128; color: #FFFFFF; border-radius: 32px; padding: 72px; display: flex; gap: 72px; align-items: center">
+<section id="research" class="mobile-padding" style="padding: 120px 96px 0">
+<div class="mobile-research" style="background: #0A1128; color: #FFFFFF; border-radius: 32px; padding: 72px; display: flex; gap: 72px; align-items: center">
 <div style="flex: 1 1 0; display: flex; flex-direction: column; gap: 22px">
 <span style="font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #7C98FF">Research focus</span>
-<h2 style="margin: 0; font-size: 44px; font-weight: 700; letter-spacing: -1.2px; line-height: 1.12">Most models can't tell <span style="color: #7C98FF">ọkọ</span> the husband from <span style="color: #7C98FF">ọkọÌ</span> the vehicle.</h2>
+<h2 class="mobile-research-title" style="margin: 0; font-size: 44px; font-weight: 700; letter-spacing: -1.2px; line-height: 1.12">Most models can't tell <span style="color: #7C98FF">ọkọ</span> the husband from <span style="color: #7C98FF">ọkọÌ</span> the vehicle.</h2>
 <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #A7B1CC">I've researched African language NLP with Masakhane since February 2025. My work focuses on low-resource languages, sub-word tokenization, orthographic normalization, and the evaluation of zero-shot versus fine-tuned models using Gemini Pro and Google Colab.</p>
 </div>
-<div style="width: 440px; flex-shrink: 0; background: #121C3A; border: 1px solid #243457; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; gap: 18px; animation: floatY 6s ease-in-out infinite">
+<div class="mobile-card" style="width: 440px; flex-shrink: 0; background: #121C3A; border: 1px solid #243457; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; gap: 18px; animation: floatY 6s ease-in-out infinite">
 <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 14px; font-weight: 600">Now building</span><span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 8px; background: #1B2A4E; color: #7C98FF">In progress</span></div>
 <span style="font-size: 22px; font-weight: 700; line-height: 1.3">Multilingual retrieval benchmark</span>
 <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; font-size: 14px">
@@ -273,31 +295,31 @@ Available for remote ML and DevRel roles
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" style="padding: 120px 96px 120px; display: flex; gap: 96px">
-<div style="width: 360px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px">
+<section id="experience" class="mobile-padding mobile-exp-stack" style="padding: 120px 96px 120px; display: flex; gap: 96px">
+<div class="mobile-exp-left" style="width: 360px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px">
 <span style="font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #2B59FF">Experience</span>
-<h2 style="margin: 0; font-size: 48px; font-weight: 700; letter-spacing: -1.5px; line-height: 1.1">Where I've worked</h2>
+<h2 class="mobile-section-title" style="margin: 0; font-size: 48px; font-weight: 700; letter-spacing: -1.5px; line-height: 1.1">Where I've worked</h2>
 <span style="font-size: 16px; line-height: 1.6; color: #5A6480; padding-top: 8px">B.Eng. Computer Engineering, Olabisi Onabanjo University, 2024.</span>
 </div>
-<div style="flex: 1 1 0; position: relative; display: flex; flex-direction: column; gap: 16px; padding-left: 36px">
-<span style="position: absolute; left: 7px; top: 12px; bottom: 12px; width: 2px; background: #D5DCEC; transform-origin: top; animation: growY 1.4s ease .2s both"></span>
+<div class="mobile-exp-right" style="flex: 1 1 0; position: relative; display: flex; flex-direction: column; gap: 16px; padding-left: 36px">
+<span class="mobile-timeline" style="position: absolute; left: 7px; top: 12px; bottom: 12px; width: 2px; background: #D5DCEC; transform-origin: top; animation: growY 1.4s ease .2s both"></span>
 <div class="lift" style="position: relative; background: #FFFFFF; border: 1px solid #E3E8F2; border-radius: 20px; padding: 26px 30px; display: flex; justify-content: space-between; gap: 24px">
-<span style="position: absolute; left: -36px; top: 32px; width: 16px; height: 16px; border-radius: 50%; background: #2B59FF; border: 4px solid #F5F7FB; box-sizing: border-box"></span>
+<span class="mobile-timeline" style="position: absolute; left: -36px; top: 32px; width: 16px; height: 16px; border-radius: 50%; background: #2B59FF; border: 4px solid #F5F7FB; box-sizing: border-box"></span>
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 20px; font-weight: 700">NLP Researcher</span><span style="font-size: 15px; color: #5A6480">Masakhane NLP Research Community</span></div>
 <span style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 14px; color: #5A6480; white-space: nowrap">Feb 2025 to now</span>
 </div>
 <div class="lift" style="position: relative; background: #FFFFFF; border: 1px solid #E3E8F2; border-radius: 20px; padding: 26px 30px; display: flex; justify-content: space-between; gap: 24px">
-<span style="position: absolute; left: -36px; top: 32px; width: 16px; height: 16px; border-radius: 50%; background: #0A1128; border: 4px solid #F5F7FB; box-sizing: border-box"></span>
+<span class="mobile-timeline" style="position: absolute; left: -36px; top: 32px; width: 16px; height: 16px; border-radius: 50%; background: #0A1128; border: 4px solid #F5F7FB; box-sizing: border-box"></span>
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 20px; font-weight: 700">Junior Airspace Traffic Control Engineer</span><span style="font-size: 15px; color: #5A6480">NAMA, Ibadan Airport · National service</span></div>
 <span style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 14px; color: #5A6480; white-space: nowrap">Jun 2025 to May 2026</span>
 </div>
 <div class="lift" style="position: relative; background: #FFFFFF; border: 1px solid #E3E8F2; border-radius: 20px; padding: 26px 30px; display: flex; justify-content: space-between; gap: 24px">
-<span style="position: absolute; left: -36px; top: 32px; width: 16px; height: 16px; border-radius: 50%; background: #0A1128; border: 4px solid #F5F7FB; box-sizing: border-box"></span>
+<span class="mobile-timeline" style="position: absolute; left: -36px; top: 32px; width: 16px; height: 16px; border-radius: 50%; background: #0A1128; border: 4px solid #F5F7FB; box-sizing: border-box"></span>
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 20px; font-weight: 700">Assistant Lead</span><span style="font-size: 15px; color: #5A6480">OOU Tech Community</span></div>
 <span style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 14px; color: #5A6480; white-space: nowrap">Nov 2023 to 2024</span>
 </div>
 <div class="lift" style="position: relative; background: #FFFFFF; border: 1px solid #E3E8F2; border-radius: 20px; padding: 26px 30px; display: flex; justify-content: space-between; gap: 24px">
-<span style="position: absolute; left: -36px; top: 32px; width: 16px; height: 16px; border-radius: 50%; background: #0A1128; border: 4px solid #F5F7FB; box-sizing: border-box"></span>
+<span class="mobile-timeline" style="position: absolute; left: -36px; top: 32px; width: 16px; height: 16px; border-radius: 50%; background: #0A1128; border: 4px solid #F5F7FB; box-sizing: border-box"></span>
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 20px; font-weight: 700">Web Developer</span><span style="font-size: 15px; color: #5A6480">Proxy Global Telecoms · React and PHP</span></div>
 <span style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 14px; color: #5A6480; white-space: nowrap">Jun 2022 to Jan 2023</span>
 </div>
@@ -305,20 +327,20 @@ Available for remote ML and DevRel roles
 </section>
 
 <!-- CONTACT -->
-<footer id="contact" style="flex-grow: 1; background: #0A1128; color: #FFFFFF; padding: 110px 96px 48px; display: flex; flex-direction: column; justify-content: space-between; gap: 72px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 64px">
+<footer id="contact" class="mobile-padding" style="flex-grow: 1; background: #0A1128; color: #FFFFFF; padding: 110px 96px 48px; display: flex; flex-direction: column; justify-content: space-between; gap: 72px">
+<div class="mobile-footer" style="display: flex; justify-content: space-between; align-items: center; gap: 64px">
 <div style="display: flex; flex-direction: column; gap: 24px; max-width: 720px">
-<h2 style="margin: 0; font-size: 64px; font-weight: 700; letter-spacing: -2px; line-height: 1.05">Let's build something that works in every language.</h2>
+<h2 class="mobile-footer-title" style="margin: 0; font-size: 64px; font-weight: 700; letter-spacing: -2px; line-height: 1.05">Let's build something that works in every language.</h2>
 <a href="mailto:makindeadedeji500@gmail.com" style="font-size: 22px; color: #7C98FF; font-weight: 500">makindeadedeji500@gmail.com</a>
 </div>
-<div style="display: flex; flex-direction: column; gap: 12px; width: 300px">
+<div class="mobile-card" style="display: flex; flex-direction: column; gap: 12px; width: 300px">
 <a href="mailto:makindeadedeji500@gmail.com" class="btn" style="height: 60px; display: flex; align-items: center; justify-content: center; background: #2B59FF; color: #FFFFFF; border-radius: 14px; font-weight: 600; font-size: 17px">Send me an email</a>
 <a href="https://linkedin.com/in/adedeji-makinde-418a37199" class="btn" style="height: 60px; display: flex; align-items: center; justify-content: center; border: 1px solid #2E3F66; color: #FFFFFF; border-radius: 14px; font-weight: 600; font-size: 17px">Connect on LinkedIn</a>
 </div>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: center; padding-top: 28px; border-top: 1px solid #1E2B4A; font-size: 15px; color: #8C97B5">
+<div class="mobile-footer-bottom" style="display: flex; justify-content: space-between; align-items: center; padding-top: 28px; border-top: 1px solid #1E2B4A; font-size: 15px; color: #8C97B5">
 <span>© 2026 Adedeji Makinde · Lagos, Nigeria</span>
-<div style="display: flex; gap: 28px"><a href="https://github.com/adedejimakinde" style="color: #D5DBEA">GitHub</a><a href="https://huggingface.co/adedejimakinde" style="color: #D5DBEA">Hugging Face</a><a href="https://hashnode.com/@adedejimakinde" style="color: #D5DBEA">Hashnode</a><a href="https://pypi.org/project/yotext/" style="color: #D5DBEA">PyPI</a></div>
+<div style="display: flex; gap: 28px; flex-wrap: wrap;"><a href="https://github.com/adedejimakinde" style="color: #D5DBEA">GitHub</a><a href="https://huggingface.co/adedejimakinde" style="color: #D5DBEA">Hugging Face</a><a href="https://hashnode.com/@adedejimakinde" style="color: #D5DBEA">Hashnode</a><a href="https://pypi.org/project/yotext/" style="color: #D5DBEA">PyPI</a></div>
 </div>
 </footer>
 </div>
